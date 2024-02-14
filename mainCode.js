@@ -10,9 +10,9 @@ function startSort(){
     let arrOfNum = x.map(str => {
         return parseInt(str, 10);
     });
-    print(arrOfNum);
+    delayVal = document.getElementById('delayValue').value;
     createBoxes(arrOfNum);
-    sort(arrOfNum);
+    sort(arrOfNum,delayVal);
 }
 
 function createBoxes(y){
@@ -30,7 +30,7 @@ function removeBoxes(){
 
     location.reload();
 }
- function sort(y){
+ function sort(y,deVal){
     var elements = document.getElementById("blockContainer").children;
     selectionSort(y);
     function swap(arr,xp, yp) 
@@ -56,8 +56,8 @@ function removeBoxes(){
                     for (j = i + 1; j < arr.length; j++) {
                         setColor(elements.item(i),'red');
                         setColor(elements.item(j),'blue');
-                        await delay(50);
-                        playTone(arr[j] * 800,"sawtooth",1);
+                        await delay(deVal);
+                        playTone(1500 + arr[i] * 10,"square",0.25);
                         removeColor(elements.item(i),'red');
                         removeColor(elements.item(j),'blue');
                         if (arr[j] < arr[min_idx]){

@@ -11,6 +11,14 @@
     <div class="container">
         <div class="inputarea" style="position: fixed;">
             <textarea name="" id="arrayInput" cols="30" rows="10" type="number" placeholder="INPUT NUMBERS ONLY"></textarea>
+                <label for="delayValue" style="color: white;">Choose delay per function:</label>
+
+                    <select id="delayValue">
+                        <option value="100">100ms</option>
+                        <option value="500">500ms</option>
+                        <option value="1000">1000ms</option>
+                        <option value="2000">2000ms</option>
+                    </select>     
             <div class="buttonsInput">
                 <button onclick="startSort()">Start Sorting</button>
                 <button onclick="removeBoxes()">Clear Boxes</button>
